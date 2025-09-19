@@ -58,6 +58,7 @@
 #   make -f Makefile.win
 #
 
+JOBS ?= 8
 -include .config
 ifeq ($(CONFIG_WINDOWS_NATIVE),y)
 include Makefile.win

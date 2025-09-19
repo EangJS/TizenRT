@@ -201,7 +201,7 @@ $(UBIN): $(UOBJS)
 	$(call ARCHIVE, $@, $(UOBJS))
 
 board$(DELIM)libboard$(LIBEXT):
-	$(Q) $(MAKE) -C board TOPDIR="$(TOPDIR)" libboard$(LIBEXT) EXTRADEFINES=$(EXTRADEFINES)
+	$(Q) $(MAKE) -j$(JOBS) -C board TOPDIR="$(TOPDIR)" libboard$(LIBEXT) EXTRADEFINES=$(EXTRADEFINES)
 
 $(OUTBIN_DIR)/tinyara$(EXEEXT): $(HEAD_OBJ) board/libboard$(LIBEXT)
 	$(Q) echo "LD: tinyara"
@@ -232,7 +232,7 @@ endif
 
 .depend: Makefile chip/Make.defs $(SRCS)
 ifeq ($(BOARDMAKE),y)
-	$(Q) $(MAKE) -C board TOPDIR="$(TOPDIR)" depend
+	$(Q) $(MAKE) -j$(JOBS) -C board TOPDIR="$(TOPDIR)" depend
 endif
 	$(Q) $(MKDEP) $(patsubst %,--dep-path %,$(subst :, ,$(VPATH))) \
 	 "$(CC)" -- $(CFLAGS) -- $(SRCS) >Make.dep
