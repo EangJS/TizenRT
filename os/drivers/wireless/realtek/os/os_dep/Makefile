@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 
 include $(MAKE_INCLUDE_GEN)
 

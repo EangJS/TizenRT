@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 # Variables:
 prefix = /usr/local
 exec_prefix = $(prefix)

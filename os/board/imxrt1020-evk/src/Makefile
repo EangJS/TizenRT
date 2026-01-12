@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 ###########################################################################
 #
 # Copyright 2019 NXP Semiconductors All Rights Reserved.

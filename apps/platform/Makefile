@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 ###########################################################################
 #
 # Copyright 2016-2017 Samsung Electronics All Rights Reserved.

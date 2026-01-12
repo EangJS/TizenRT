@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 include araui.mk
 
 TARGET = sim

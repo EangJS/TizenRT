@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 ############################################################################
 #
 # Copyright 2018, Cypress Semiconductor Corporation or a subsidiary of 

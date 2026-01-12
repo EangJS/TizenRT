@@ -1,3 +1,5 @@
+.NOTPARALLEL:
+
 ##
 # override with `make BUILD=debug`
 # override with `make PLATFORM=arduinomega` or `make PLATFORM=arduinodue`
