@@ -54,6 +54,7 @@
 DEPPATH = --dep-path .
 VPATH = .
 ASRCS =
+CSRCS += gcov_public.c gcov_gcc.c
 
 ROOT_DIR = $(shell cd $(TOPDIR)/.. && pwd)
 BUILD_DIR = $(ROOT_DIR)/build/tools/amebasmart/gnu_utility
@@ -226,6 +227,8 @@ else
   CFLAGS += -I$(TOPDIR)/se/ameba
   
 endif
+
+CFLAGS += -ftest-coverage -fprofile-arcs -O0
 
 all: libboard$(LIBEXT)
 
